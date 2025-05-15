@@ -137,6 +137,7 @@
     <ClInclude Include="RAM.h" />
     <ClInclude Include="Processor.h" />
     <ClInclude Include="String.h" />
+    <ClInclude Include="Webcam.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

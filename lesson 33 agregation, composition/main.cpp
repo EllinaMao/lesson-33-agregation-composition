@@ -36,6 +36,18 @@ using namespace std;
 
 int main()
 {
+	cout << "Hello World!" << endl;
+	// Создание объектов классов
+	// Пример:
+	// Processor processor("Intel Core i7", 8, 16, 3.5);
+	// RAM ram("Corsair Vengeance", 16, 3200);
+	// Mouse mouse("Logitech G502", "Wireless", 16000);
+	// Webcam webcam("Logitech C920");
+	// Printer printer("HP LaserJet");
+	// GraphicsCard graphicsCard("NVIDIA GeForce RTX 3080");
+	// Создание объекта класса Nout с использованием агрегации или композиции
+	// Nout nout(processor, ram, mouse, webcam, printer, graphicsCard);
+	return 0;
 
 
 

@@ -13,6 +13,9 @@ private:
 	float m_frequency;
 
 public:
+	Processor()
+		: m_name("Unknown"), m_cores(0), m_threads(0), m_frequency(0.0f) {
+	}
 	Processor(const char* name, int cores, int threads, float frequency)
 		: m_name(name), m_cores(cores), m_threads(threads), m_frequency(frequency) {
 	}

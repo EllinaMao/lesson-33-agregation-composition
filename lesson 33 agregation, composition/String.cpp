@@ -184,7 +184,7 @@ const char* String::GetStr() const
 
 void String::Output() const {
 	if (str) {
-		cout << str << endl;
+		cout << str;
 	}
 	else {
 		cout << "Cant show empty str" << endl;

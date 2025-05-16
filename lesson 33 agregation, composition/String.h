@@ -71,7 +71,7 @@ public:
 	}
 
 	friend ostream& operator<<(ostream& os, const String& s) {
-		os << s.str << endl;
+		os << s.str;
 		return os;
 	}
 

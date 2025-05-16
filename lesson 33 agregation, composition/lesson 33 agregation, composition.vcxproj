@@ -127,13 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Laptop.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="OZU.cpp" />
-    <ClCompile Include="Processor.cpp" />
     <ClCompile Include="String.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GraphicsCard.h" />
+    <ClInclude Include="Laptop.h" />
     <ClInclude Include="Mouse.h" />
+    <ClInclude Include="Printer.h" />
     <ClInclude Include="RAM.h" />
     <ClInclude Include="Processor.h" />
     <ClInclude Include="String.h" />

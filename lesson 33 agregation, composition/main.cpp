@@ -32,28 +32,51 @@ MyString замість   string   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
 
 #include <iostream>
+#include "String.h" 
+#include "Processor.h"
+#include "RAM.h"
+#include "Mouse.h"
+#include "Webcam.h"
+#include "Printer.h"
+#include "GraphicsCard.h"
+#include "Laptop.h" 
 using namespace std;
 
 int main()
 {
-	cout << "Hello World!" << endl;
-	// Создание объектов классов
-	// Пример:
-	// Processor processor("Intel Core i7", 8, 16, 3.5);
-	// RAM ram("Corsair Vengeance", 16, 3200);
-	// Mouse mouse("Logitech G502", "Wireless", 16000);
-	// Webcam webcam("Logitech C920");
-	// Printer printer("HP LaserJet");
-	// GraphicsCard graphicsCard("NVIDIA GeForce RTX 3080");
-	// Создание объекта класса Nout с использованием агрегации или композиции
-	// Nout nout(processor, ram, mouse, webcam, printer, graphicsCard);
+	size_t size = 2;
+	Processor processor("Intel Core i7", 8, 16, 3.5);
+	RAM ram("Corsair Vengeance", 16, 3200);
+	GraphicsCard graphicsCard("NVIDIA GeForce RTX 3080", "GDDR6X", 10);
+    Mouse* mouse = new Mouse("Logitech G502", "Wireless", 16000);  
+	Webcam* webcam = new Webcam("Logitech C920", "1080p", 30.0f);
+	Printer* printer = new Printer("HP LaserJet", "Laser");
+    
+	Processor processor2("Intel Core i7", 8, 16, 3.5);
+	RAM ram2("Corsair Vengeance", 16, 3200);
+	GraphicsCard graphicsCard2("NVIDIA GeForce RTX 3080", "GDDR6X", 10);
+
+
+	Laptop* laptop2 = new Laptop(processor2, ram2, graphicsCard2, mouse, webcam, printer);
+	Laptop* laptop = new Laptop(processor, ram, graphicsCard, mouse, webcam, printer);
+
+	Laptop** laptops = new Laptop * [size];
+	laptops[0] = laptop;
+	laptops[1] = laptop2;
+	for (int i = 0; i < size; i++)
+	{
+		laptops[i]->Print();
+	}
+
+	for (int i = 0; i < size; i++)
+	{
+		delete laptops[i];
+	}
+
+	delete[] laptops;
+	delete mouse;
+	delete webcam;
+	delete printer;
 	return 0;
-
-
-
-
-
-
-
 }
 

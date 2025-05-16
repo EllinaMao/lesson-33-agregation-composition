@@ -11,6 +11,9 @@ public:
 	Webcam(const char* name, const char* resolution, float frameRate)
 		: name(name), resolution(resolution), frameRate(frameRate) {
 	}
+	Webcam(const Webcam& other)
+		: name(other.name), resolution(other.resolution), frameRate(other.frameRate) {
+	}
 	void Print() const {
 		cout << "Webcam: " << name << ", Resolution: " << resolution
 			<< ", Frame Rate: " << frameRate << " FPS" << endl;
